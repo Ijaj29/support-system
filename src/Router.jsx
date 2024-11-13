@@ -18,30 +18,30 @@ import ResolveTicket from './components/pages/ResolveTicket';
 
 const Router = createBrowserRouter([
     {
-        path: '/',
+        path: '',
         element: <GuestLayout />,
         children: [
-            { path: '/', element: <Login /> },
-            { path: '/users/add', element: <AddUsers /> },
+            { path: '', element: <Login /> },
+            { path: 'users/add', element: <AddUsers /> },
         ]
     }, {
         element: <MainLayout />,
         children: [
-            { path: '/admin', element: <AdminHome /> },
-            { path: '/admin/assign-ticket/:id', element: <Assign /> },
-            { path: '/admin/ticket', element: <TicketList /> },
+            { path: 'admin', element: <AdminHome /> },
+            { path: 'admin/assign-ticket/:id', element: <Assign /> },
+            { path: 'admin/ticket', element: <TicketList /> },
 
-            { path: '/user', element: <UserHome /> },
-            { path: '/user/add-ticket', element: <AddTicket /> },
-            { path: '/users/edit/:id', element: <EditUser /> },
-            { path: '/users/:id', element: <ViewUser /> },
+            { path: 'user', element: <UserHome /> },
+            { path: 'user/add-ticket', element: <AddTicket /> },
+            { path: 'users/edit/:id', element: <EditUser /> },
+            { path: 'users/:id', element: <ViewUser /> },
 
-            { path: '/support', element: <SupportHome /> },
+            { path: 'support', element: <SupportHome /> },
 
-            { path: '/about', element: <About /> },
-            { path: '/contact', element: <Contact /> },
+            { path: 'about', element: <About /> },
+            { path: 'contact', element: <Contact /> },
 
-            { path: '/resolve-ticket/:id', element: <ResolveTicket /> },
+            { path: 'resolve-ticket/:id', element: <ResolveTicket /> },
         ]
     }, {
         path: '*',
