@@ -21,7 +21,7 @@ function AddTicket() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.post("http://localhost:3003/tickets", ticket);
+        await axios.post("https://ijaj29.github.io/support-system/tickets", ticket);
         navigate("/user");
     };
 

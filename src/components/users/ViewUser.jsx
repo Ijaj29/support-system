@@ -15,7 +15,7 @@ function ViewUser() {
   const { id } = useParams();
 
   const loadUser = async () => {
-    const res = await axios.get(`http://localhost:3003/users/${id}`);
+    const res = await axios.get(`https://ijaj29.github.io/support-system/users/${id}`);
     setUser(res.data);
   };
   

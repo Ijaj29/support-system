@@ -21,7 +21,7 @@ function AddUsers() {
 
   const onSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:3003/users", user);
+    await axios.post("https://ijaj29.github.io/support-system/users", user);
     navigate("/");
   };
 

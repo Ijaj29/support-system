@@ -24,14 +24,14 @@ function Assign() {
 
     const onSubmit = async (e) => {
         e.preventDefault();
-        await axios.put(`http://localhost:3003/tickets/${id}`, ticket);
+        await axios.put(`https://ijaj29.github.io/support-system/tickets/${id}`, ticket);
         navigate("/admin/ticket");
     };
 
     const [users, setUsers] = useState([]);
 
     const loadUsers = async () => {
-        const result = await axios.get("http://localhost:3003/users");
+        const result = await axios.get("https://ijaj29.github.io/support-system/users");
         setUsers(result.data.filter((data, k) => {
             return data.role == 'support'
         }).reverse());

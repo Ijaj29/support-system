@@ -10,7 +10,7 @@ function TicketTable() {
     const id = localStorage.getItem('CURRENT_USERID');
 
     const loadTickets = async () => {
-        const result = await axios.get("http://localhost:3003/tickets");
+        const result = await axios.get("https://ijaj29.github.io/support-system/tickets");
         if (role == 'admin') {
             setTickets(result.data.reverse());
         } else if (role == 'user') {
@@ -29,12 +29,12 @@ function TicketTable() {
             ...tableData,
             resolve: true
         }
-        await axios.put(`http://localhost:3003/tickets/${tableData.id}`, obj);
+        await axios.put(`https://ijaj29.github.io/support-system/tickets/${tableData.id}`, obj);
         loadTickets();
     };
 
     const loadUsers = async () => {
-        const result = await axios.get("http://localhost:3003/users");
+        const result = await axios.get("https://ijaj29.github.io/support-system/users");
         setUsers(result.data.filter((data, k) => {
             return data.role != 'admin'
         }).reverse());

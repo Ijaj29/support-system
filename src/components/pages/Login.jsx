@@ -32,7 +32,7 @@ const Login = () => {
 
 
     const loadUsers = async () => {
-        const result = await axios.get("http://localhost:3003/users");
+        const result = await axios.get("https://ijaj29.github.io/support-system/users");
         setUsers(result.data.reverse());
     }
 

@@ -6,14 +6,14 @@ const AdminHome = () => {
   const [users, setUsers] = useState([]);
 
   const loadUsers = async () => {
-    const result = await axios.get("http://localhost:3003/users");
+    const result = await axios.get("https://ijaj29.github.io/support-system/users");
     setUsers(result.data.filter((data, k) => {
         return data.role != 'admin'
     }).reverse());
   };
 
   const deleteUser = async (id) => {
-    await axios.delete(`http://localhost:3003/users/${id}`);
+    await axios.delete(`https://ijaj29.github.io/support-system/users/${id}`);
     loadUsers();
   };
 

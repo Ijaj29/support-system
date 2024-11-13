@@ -31,7 +31,7 @@ function ResolveTicket() {
             ...Resolve,
             resolve: true
         }
-        await axios.put(`http://localhost:3003/tickets/${id}`, obj);
+        await axios.put(`https://ijaj29.github.io/support-system/tickets/${id}`, obj);
         if (role == 'admin') {
             navigate("/admin/ticket");
         } else {
